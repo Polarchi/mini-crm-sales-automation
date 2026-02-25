@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mini CRM + Automatización</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Mini CRM + Automatización</h1>
+    <p class="sub">Registro de leads + pipeline + recordatorios automáticos (simulados)</p>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Registrar lead</h2>
+      <form id="leadForm" class="form">
+        <label>Nombre
+          <input id="name" required placeholder="Ej: Ana Pérez" />
+        </label>
+        <label>WhatsApp
+          <input id="phone" required placeholder="Ej: +593 9xxxxxxx" />
+        </label>
+        <label>Interés
+          <input id="interest" required placeholder="Ej: Chatbot / Automatización" />
+        </label>
+
+        <button type="submit">Agregar</button>
+      </form>
+
+      <div class="row">
+        <button id="runAutomation" class="secondary">Ejecutar automatización</button>
+        <button id="exportCsv" class="secondary">Exportar CSV</button>
+        <button id="clearAll" class="danger">Borrar todo</button>
+      </div>
+
+      <p class="hint">
+        Automatización: si un lead está en “Nuevo” o “Contactado” y han pasado 2 días sin actualización → se marca “Requiere seguimiento”.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Resumen</h2>
+      <div id="stats" class="stats"></div>
+      <h3>Notificaciones</h3>
+      <ul id="notifications" class="notifications"></ul>
+    </section>
+
+    <section class="card wide">
+      <h2>Pipeline</h2>
+      <div class="pipeline">
+        <div class="col">
+          <h3>Nuevo</h3>
+          <div id="col-new" class="list"></div>
+        </div>
+        <div class="col">
+          <h3>Contactado</h3>
+          <div id="col-contacted" class="list"></div>
+        </div>
+        <div class="col">
+          <h3>Calificado</h3>
+          <div id="col-qualified" class="list"></div>
+        </div>
+        <div class="col">
+          <h3>Cerrado</h3>
+          <div id="col-closed" class="list"></div>
+        </div>
+        <div class="col">
+          <h3>Perdido</h3>
+          <div id="col-lost" class="list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    Hecho por <span id="author">Tu Nombre</span> — Proyecto para portafolio
+  </footer>
+
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>

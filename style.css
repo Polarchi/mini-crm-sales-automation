@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, Arial; margin: 0; background: #0f1115; color: #e8e8ea; }
+.container { max-width: 1100px; margin: 0 auto; padding: 18px; }
+h1 { margin: 0 0 6px; }
+.sub { margin: 0; opacity: .8; }
+.grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+.card { background: #171a21; border: 1px solid #2a2f3a; border-radius: 16px; padding: 16px; }
+.wide { grid-column: 1 / -1; }
+.form { display: grid; gap: 10px; }
+label { display: grid; gap: 6px; font-size: 14px; opacity: .95; }
+input { padding: 10px 12px; border-radius: 12px; border: 1px solid #2a2f3a; background: #0f1115; color: #e8e8ea; }
+button { padding: 10px 12px; border-radius: 12px; border: 1px solid #2a2f3a; background: #2b6cff; color: white; cursor: pointer; }
+button:hover { opacity: .95; }
+.row { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.secondary { background: #2a2f3a; }
+.danger { background: #c0392b; }
+.hint { font-size: 13px; opacity: .75; margin-top: 10px; }
+
+.pipeline { display: grid; gap: 12px; grid-template-columns: repeat(5, 1fr); }
+.col h3 { margin: 0 0 10px; font-size: 15px; opacity: .9; }
+.list { min-height: 160px; background: #0f1115; border: 1px dashed #2a2f3a; border-radius: 14px; padding: 10px; display: grid; gap: 10px; align-content: start; }
+
+.lead { border: 1px solid #2a2f3a; border-radius: 14px; padding: 10px; background: #171a21; }
+.lead .top { display: flex; justify-content: space-between; gap: 8px; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid #2a2f3a; opacity: .9; }
+.badge.follow { border-color: #ffcc00; }
+.small { font-size: 12px; opacity: .8; margin-top: 6px; }
+.actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.actions button { background: #2a2f3a; }
+.actions button.primary { background: #2b6cff; }
+
+.stats { display: grid; gap: 8px; margin-bottom: 8px; }
+.stat { display: flex; justify-content: space-between; padding: 10px; border: 1px solid #2a2f3a; border-radius: 12px; background: #0f1115; }
+.notifications { margin: 0; padding-left: 16px; opacity: .9; }
+.footer { opacity: .7; font-size: 13px; padding-bottom: 30px; }
+@media (max-width: 950px) {
+  .grid { grid-template-columns: 1fr; }
+  .pipeline { grid-template-columns: 1fr; }
+}
